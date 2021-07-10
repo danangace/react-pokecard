@@ -1,25 +1,49 @@
-import logo from './logo.svg';
 import './App.css';
+import { 
+  BrowserRouter as Router,
+  Switch, 
+  Route
+} from 'react-router-dom'
+import Home from './pages/Home'
+import CardList from './pages/CardList'
+import CardDetail from './pages/CardDetail';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        {/* <Header></Header> */}
+        <div className="content">
+        <Switch>
+          <Route path="/card/:id">
+            <CardDetail></CardDetail>
+          </Route>
+          <Route path="/card">
+            <CardList></CardList>
+          </Route>
+          <Route path="/">
+            <Home></Home>
+          </Route>
+        </Switch>
+        </div>
+        {/* <Footer></Footer> */}
+      </div>
+    </Router>
   );
 }
+
+// function useFetchPokemonType () {
+//   const [type, setTypes] = useState([])
+//   useEffect(() => {
+//     fetch("https://api.pokemontcg.io/v2/types")
+//       .then((response) => {
+//         return response.json()
+//       })
+//       .then(data => {
+//         setTypes(data.data)
+//       })
+//   }, [])
+//   return type
+// }
 
 export default App;
