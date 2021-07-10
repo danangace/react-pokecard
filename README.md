@@ -1,16 +1,17 @@
 # React Pokecard App
 This project was created with React Js.
-Purpose of this project is to help creator to refresh about : 
-- Basic React js framework.
-- Usage of react-router
-- Fetching 3rd Party API
-- Usage of react-hooks, includes usage of custom hooks
+Purpose of this project is to help creator to refresh about Basic Concept of React Js Framework : 
+- React Js Lifecycle.
+- Component and Props.
+- Usage of react-router.
+- Fetching 3rd Party API.
+- Usage of react-hooks, includes usage of custom hooks.
 
 
 ## Feature
 
 - Listed of pokemon cards
-- Listeed of pokemon cards based on Pokemon Type
+- Listed of pokemon cards based on Pokemon Type
 - Search Pokemon Card (**On Progress**) 
 - Detail Pokemon Card (**On Progress**)
 
